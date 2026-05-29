@@ -69,8 +69,6 @@ function renderProducts(){
 
 function money(n){ return n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"}); }
 
-
-
 /* ============================================================
    CHINELÊ BY MADUZZI — carrinho + finalização WhatsApp
    ============================================================ */
@@ -79,7 +77,7 @@ function money(n){ return n.toLocaleString("pt-BR",{style:"currency",currency:"B
 const WHATSAPP = "5561999999999";
 const STORE = "Chinelê by Maduzzi";
 
-const BRL = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const BRL = money;
 
 /* ---------- Estado ---------- */
 let cart = [];
@@ -244,14 +242,11 @@ function initMobileMenu(){
   function closeMobile(){mm.classList.remove("open");document.body.style.overflow=""}
 }
 
-/* ---------- Reveal: entrada via CSS (sem JS) ---------- */
-function initReveal(){ /* a animação de entrada é puramente CSS, sempre visível por padrão */ }
-
 /* ---------- Header shadow ---------- */
 function initHeader(){
   const h = $(".header");
-  addEventListener("scroll",()=>{
-    h.style.boxShadow = scrollY>20 ? "0 6px 30px rgba(16,16,16,.06)" : "none";
+  window.addEventListener("scroll",()=>{
+    h.style.boxShadow = window.scrollY>20 ? "0 6px 30px rgba(16,16,16,.06)" : "none";
   });
 }
 
@@ -260,7 +255,6 @@ document.addEventListener("DOMContentLoaded",()=>{
   initProductOptions();
   initFilters();
   initMobileMenu();
-  initReveal();
   initHeader();
   renderCart();
 

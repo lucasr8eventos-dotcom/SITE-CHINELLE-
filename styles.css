@@ -30,6 +30,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
+:focus-visible{outline:2px solid var(--obsidian);outline-offset:3px}
 html{scroll-behavior:smooth}
 body{
   font-family:var(--font-ui);
@@ -343,7 +344,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.06;let
 .cart-item .ci-qty{display:inline-flex;align-items:center;border:1px solid var(--line)}
 .cart-item .ci-qty button{width:28px;height:28px;display:grid;place-items:center;color:var(--ink-60)}
 .cart-item .ci-qty span{min-width:26px;text-align:center;font-size:12px}
-.cart-foot{padding:24px 28px;border-top:1px solid var(--line);background:var(--ivory)}
+.cart-foot{padding:24px 28px;border-top:1px solid var(--line);background:var(--ivory);display:none}
 .cart-line{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-60);margin-bottom:8px}
 .cart-total{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 6px}
 .cart-total .t-lbl{font-size:13px;letter-spacing:.14em;text-transform:uppercase}
